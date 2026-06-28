@@ -2,739 +2,938 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sarvan Cyber Cafe — Digital Services Hub, Shamsabad, Agra</title>
-<meta name="description" content="Sarvan Cyber Cafe, Toola Tivriya, Shamsabad, Agra. Printing, Aadhaar, PAN, Passport, Railway & Flight Tickets, Bill Payments, Banking, Scholarships, GST, Income Tax & more — by Sarvan Singh." />
-<meta name="theme-color" content="#0A0E1A" />
-<meta property="og:title" content="Sarvan Cyber Cafe — Shamsabad, Agra" />
-<meta property="og:description" content="Your village's digital gateway — Aadhaar, PAN, Passport, Tickets, Printing & every government e-service, all in one place." />
-<meta property="og:type" content="website" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@500;700&display=swap" rel="stylesheet" />
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/lucide@latest"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>The Sweat Yard — Mukherjee Nagar, Delhi | Strength Built Here</title>
+<meta name="description" content="The Sweat Yard is a women-owned strength gym in Mukherjee Nagar, Delhi. Rated 4.8 by 374+ members. State-of-the-art equipment, real trainers, real results." />
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#070A12;
-  --bg-soft:#0C1120;
-  --surface: rgba(255,255,255,0.04);
-  --surface-strong: rgba(255,255,255,0.07);
-  --border: rgba(255,255,255,0.09);
-  --text:#EAF0FF;
-  --text-dim:#8C97B8;
-  --cyan:#22E3FF;
-  --violet:#8B5CF6;
-  --marigold:#FFB02E;
-  --vermilion:#FF5C39;
-  --grad-1: linear-gradient(135deg,#22E3FF 0%, #8B5CF6 100%);
-  --grad-2: linear-gradient(135deg,#FFB02E 0%, #FF5C39 100%);
-  --radius:18px;
+  --void:#0a0a0a;
+  --charcoal:#161513;
+  --steel:#3a3733;
+  --bone:#ece8df;
+  --bone-dim:#a8a399;
+  --blood:#c41e1e;
+  --blood-glow:#ff3b3b;
+  --gold:#cdb079;
+  --font-display:'Anton', sans-serif;
+  --font-body:'Inter', sans-serif;
+  --font-mono:'JetBrains Mono', monospace;
 }
-html.light{
-  --bg:#F7F7FB;
-  --bg-soft:#FFFFFF;
-  --surface: rgba(10,14,26,0.035);
-  --surface-strong: rgba(10,14,26,0.06);
-  --border: rgba(10,14,26,0.08);
-  --text:#0B0E1A;
-  --text-dim:#5A6378;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{background:var(--void);}
 body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:'Inter',sans-serif;
+  background:var(--void);
+  color:var(--bone);
+  font-family:var(--font-body);
   overflow-x:hidden;
   cursor:none;
-  transition:background .4s ease,color .4s ease;
 }
-.font-display{font-family:'Space Grotesk',sans-serif}
-.font-deva{font-family:'Noto Sans Devanagari',sans-serif}
-::selection{background:var(--cyan);color:#04101A}
-
-/* custom cursor */
-#cursor-dot, #cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;transform:translate(-50%,-50%);}
-#cursor-dot{width:7px;height:7px;background:var(--cyan);box-shadow:0 0 10px var(--cyan);}
-#cursor-ring{width:34px;height:34px;border:1.4px solid rgba(34,227,255,.5);transition:width .2s,height .2s,border-color .2s,background .2s;}
-.cursor-grow #cursor-ring{width:60px;height:60px;background:rgba(34,227,255,.08);border-color:var(--cyan);}
-@media (max-width:900px){#cursor-dot,#cursor-ring{display:none}body{cursor:auto}}
+@media (max-width:900px){ body{cursor:auto;} }
+::selection{background:var(--blood);color:var(--bone);}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+button{font-family:inherit;border:none;background:none;cursor:pointer;color:inherit;}
 
 /* scrollbar */
-::-webkit-scrollbar{width:9px}
-::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:var(--border);border-radius:10px}
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{background:var(--void);}
+::-webkit-scrollbar-thumb{background:var(--blood);}
 
-/* glass */
-.glass{
-  background:var(--surface);
-  border:1px solid var(--border);
-  backdrop-filter:blur(18px) saturate(140%);
-  -webkit-backdrop-filter:blur(18px) saturate(140%);
+/* reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
 }
-.glass-strong{
-  background:var(--surface-strong);
-  border:1px solid var(--border);
-  backdrop-filter:blur(22px) saturate(160%);
-  -webkit-backdrop-filter:blur(22px) saturate(160%);
+
+/* ============ CURSOR ============ */
+#cursor-glow{
+  position:fixed; top:0; left:0; width:520px; height:520px; border-radius:50%;
+  background:radial-gradient(circle, rgba(196,30,30,0.16) 0%, rgba(196,30,30,0.05) 35%, transparent 70%);
+  pointer-events:none; z-index:9998; transform:translate(-50%,-50%);
+  mix-blend-mode:screen; will-change:transform;
 }
-.grad-text{
-  background:var(--grad-1);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
+#cursor-dot{
+  position:fixed; top:0; left:0; width:10px; height:10px; border-radius:50%;
+  background:var(--bone); pointer-events:none; z-index:9999; transform:translate(-50%,-50%);
+  transition:width .25s,height .25s,background .25s;
+  mix-blend-mode:difference;
 }
-.grad-text-2{
-  background:var(--grad-2);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
+#cursor-dot.hover{width:54px;height:54px;background:var(--blood);}
+@media (max-width:900px){ #cursor-glow,#cursor-dot{display:none;} }
+
+/* ============ LOADER ============ */
+#loader{
+  position:fixed; inset:0; background:var(--void); z-index:10000;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px;
 }
-.btn-primary{
-  background:var(--grad-1);color:#04101A;font-weight:700;
-  padding:14px 30px;border-radius:100px;display:inline-flex;align-items:center;gap:10px;
-  box-shadow:0 8px 30px -8px rgba(34,227,255,.55);
-  transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s;
+#loader .mark{font-family:var(--font-display); font-size:clamp(28px,6vw,56px); letter-spacing:.04em; color:var(--bone);}
+#loader .bar{width:240px; height:2px; background:var(--steel); position:relative; overflow:hidden;}
+#loader .bar span{position:absolute; inset:0; width:0%; background:var(--blood); transition:width .2s ease;}
+#loader .pct{font-family:var(--font-mono); font-size:11px; color:var(--bone-dim); letter-spacing:.15em;}
+
+/* ============ LAYOUT BASICS ============ */
+.wrap{max-width:1360px; margin:0 auto; padding-left:6vw; padding-right:6vw;}
+section{position:relative; z-index:2;}
+.eyebrow{
+  font-family:var(--font-mono); font-size:11px; letter-spacing:.3em; text-transform:uppercase;
+  color:var(--blood); display:flex; align-items:center; gap:10px; margin-bottom:18px;
 }
-.btn-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 14px 40px -8px rgba(34,227,255,.7)}
-.btn-ghost{
-  border:1px solid var(--border);padding:14px 28px;border-radius:100px;
-  display:inline-flex;align-items:center;gap:10px;font-weight:600;
-  transition:.3s; background:var(--surface);
+.eyebrow::before{content:''; width:22px; height:1px; background:var(--blood);}
+.huge{
+  font-family:var(--font-display); text-transform:uppercase; line-height:0.92; letter-spacing:.01em;
+  color:var(--bone);
 }
-.btn-ghost:hover{border-color:var(--cyan);background:var(--surface-strong);transform:translateY(-2px)}
+.reveal-line{overflow:hidden; display:block;}
+.reveal-line > span{display:inline-block; transform:translateY(110%);}
 
-.card-hover{transition:transform .45s cubic-bezier(.2,.8,.2,1), border-color .35s, box-shadow .45s}
-.card-hover:hover{transform:translateY(-8px);border-color:rgba(34,227,255,.4);box-shadow:0 20px 50px -20px rgba(34,227,255,.35)}
-
-.noise{position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:1;mix-blend-mode:overlay;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");}
-
-.section-eyebrow{
-  letter-spacing:.22em;text-transform:uppercase;font-size:12px;font-weight:700;color:var(--cyan);
+/* ============ NAV ============ */
+#nav{
+  position:fixed; top:0; left:0; right:0; z-index:500;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:22px 6vw; transition:background .4s ease, padding .4s ease, border-color .4s ease;
+  border-bottom:1px solid transparent;
+  mix-blend-mode:normal;
 }
-#hero-canvas{position:absolute;inset:0;z-index:0;}
-.loader-screen{position:fixed;inset:0;z-index:10000;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;}
-
-.marquee-track{display:flex;white-space:nowrap;animation:marquee 26s linear infinite;}
-@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-.fade-up{opacity:0;transform:translateY(36px);}
-.tilt-card{transform-style:preserve-3d;}
-
-input,textarea,select{
-  background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px 16px;
-  width:100%;color:var(--text);outline:none;transition:.3s;font-size:14.5px;
+#nav.scrolled{ background:rgba(10,10,10,0.82); backdrop-filter:blur(14px); padding:14px 6vw; border-bottom:1px solid rgba(255,255,255,0.07); }
+#nav .logo{font-family:var(--font-display); font-size:20px; letter-spacing:.05em;}
+#nav .logo .dot{color:var(--blood);}
+#nav ul{display:flex; gap:34px; list-style:none;}
+#nav ul li a{
+  font-family:var(--font-mono); font-size:11px; letter-spacing:.15em; text-transform:uppercase; color:var(--bone-dim);
+  position:relative; padding-bottom:4px;
 }
-input:focus,textarea:focus,select:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(34,227,255,.12)}
-input::placeholder,textarea::placeholder{color:var(--text-dim)}
+#nav ul li a::after{content:''; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--blood); transition:width .3s ease;}
+#nav ul li a:hover{color:var(--bone);}
+#nav ul li a:hover::after{width:100%;}
+#nav-cta{
+  font-family:var(--font-mono); font-size:11px; letter-spacing:.15em; text-transform:uppercase;
+  border:1px solid var(--bone); padding:10px 20px; transition:.3s;
+}
+#nav-cta:hover{background:var(--bone); color:var(--void);}
+#nav-toggle{display:none;}
+@media (max-width:900px){
+  #nav ul{display:none;}
+  #nav-toggle{display:block; font-family:var(--font-mono); font-size:11px; letter-spacing:.15em; border:1px solid var(--bone); padding:8px 14px;}
+}
 
-.accordion-item[open] .acc-icon{transform:rotate(45deg)}
-.acc-icon{transition:transform .3s}
+/* ============ HERO ============ */
+#hero{height:100vh; min-height:680px; position:relative; display:flex; align-items:flex-end; overflow:hidden;}
+#hero-canvas{position:absolute; inset:0; z-index:1;}
+#hero-vignette{
+  position:absolute; inset:0; z-index:2; pointer-events:none;
+  background:radial-gradient(ellipse 90% 70% at 50% 100%, rgba(10,10,10,0.95) 10%, transparent 60%),
+             linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.15) 30%, rgba(10,10,10,0.85) 100%);
+}
+#hero-content{position:relative; z-index:3; width:100%; padding:0 6vw 7vw;}
+#hero-title{font-size:clamp(56px,11vw,158px); margin-bottom:6px;}
+#hero-title .line2{color:transparent; -webkit-text-stroke:1.5px var(--bone);}
+#hero-sub{
+  display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:24px;
+  margin-top:26px; padding-top:26px; border-top:1px solid rgba(255,255,255,0.12);
+}
+#hero-sub p{max-width:420px; color:var(--bone-dim); font-size:15px; line-height:1.6;}
+#hero-rating{display:flex; align-items:center; gap:14px; font-family:var(--font-mono);}
+#hero-rating .num{font-size:34px; color:var(--bone); font-weight:700;}
+#hero-rating .meta{font-size:11px; color:var(--bone-dim); letter-spacing:.1em; line-height:1.6;}
+.scroll-cue{
+  position:absolute; bottom:24px; right:6vw; z-index:3; display:flex; flex-direction:column; align-items:center; gap:10px;
+  font-family:var(--font-mono); font-size:10px; letter-spacing:.2em; color:var(--bone-dim);
+}
+.scroll-cue .line{width:1px; height:46px; background:linear-gradient(180deg, var(--blood), transparent); animation:scrollline 1.8s infinite;}
+@keyframes scrollline{0%{transform:scaleY(0); transform-origin:top;}50%{transform:scaleY(1); transform-origin:top;}50.01%{transform-origin:bottom;}100%{transform:scaleY(0); transform-origin:bottom;}}
 
-.stat-num{font-family:'Space Grotesk',sans-serif;font-weight:700}
+/* ============ MARQUEE ============ */
+.marquee-strip{
+  background:var(--blood); color:var(--void); overflow:hidden; white-space:nowrap; padding:14px 0;
+  font-family:var(--font-display); font-size:20px; letter-spacing:.02em; text-transform:uppercase;
+}
+.marquee-strip .track{display:inline-block; padding-left:0; animation:marquee 22s linear infinite;}
+.marquee-strip .track span{margin:0 28px;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
-.glow-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.35;pointer-events:none;}
+/* ============ ABOUT ============ */
+#about{padding:160px 0 120px; background:var(--void);}
+.about-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:80px; align-items:start;}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr; gap:50px;}}
+#about h2{font-size:clamp(40px,6vw,80px); margin-bottom:30px;}
+#about .lede{font-size:18px; line-height:1.75; color:var(--bone-dim); max-width:520px; margin-bottom:36px;}
+.stat-row{display:grid; grid-template-columns:repeat(3,1fr); gap:30px; border-top:1px solid rgba(255,255,255,.12); padding-top:30px;}
+.stat-row .stat-num{font-family:var(--font-mono); font-size:clamp(30px,4vw,46px); color:var(--bone); font-weight:700;}
+.stat-row .stat-label{font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--bone-dim); margin-top:6px;}
+.about-card{
+  background:linear-gradient(155deg, rgba(255,255,255,.05), rgba(255,255,255,.01));
+  border:1px solid rgba(255,255,255,.1); padding:34px; border-radius:2px; position:relative; overflow:hidden;
+}
+.about-card .tag{
+  position:absolute; top:18px; right:18px; font-family:var(--font-mono); font-size:10px; letter-spacing:.15em;
+  border:1px solid var(--blood); color:var(--blood); padding:5px 10px; text-transform:uppercase;
+}
+.about-card h3{font-family:var(--font-display); font-size:26px; text-transform:uppercase; margin-bottom:14px; letter-spacing:.02em;}
+.about-card p{color:var(--bone-dim); font-size:14.5px; line-height:1.7; margin-bottom:18px;}
+.about-card .addr{font-family:var(--font-mono); font-size:12.5px; color:var(--bone); line-height:1.8; border-top:1px dashed rgba(255,255,255,.18); padding-top:18px;}
+
+/* ============ MEMBERSHIP ============ */
+#membership{padding:120px 0; background:var(--charcoal); position:relative;}
+#membership .head{display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:24px; margin-bottom:64px;}
+#membership h2{font-size:clamp(40px,6vw,76px);}
+.plans{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.1);}
+@media (max-width:900px){.plans{grid-template-columns:1fr;}}
+.plan{
+  background:var(--charcoal); padding:46px 36px; position:relative; transition:background .4s ease, transform .4s ease;
+  perspective:1000px;
+}
+.plan.feat{background:#1d1b18;}
+.plan:hover{background:#201d19;}
+.plan .pname{font-family:var(--font-mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--blood); margin-bottom:18px;}
+.plan .pprice{font-family:var(--font-display); font-size:48px; margin-bottom:6px;}
+.plan .pprice sup{font-size:18px; font-family:var(--font-mono); vertical-align:top;}
+.plan .pcycle{font-size:12px; color:var(--bone-dim); margin-bottom:30px; letter-spacing:.05em;}
+.plan ul{list-style:none; margin-bottom:36px; display:flex; flex-direction:column; gap:14px;}
+.plan li{font-size:14px; color:var(--bone-dim); display:flex; gap:10px; align-items:flex-start;}
+.plan li::before{content:'—'; color:var(--blood);}
+.plan-btn{
+  display:inline-flex; align-items:center; gap:10px; font-family:var(--font-mono); font-size:11px; letter-spacing:.15em;
+  text-transform:uppercase; padding:14px 0; border-top:1px solid rgba(255,255,255,.15); width:100%; justify-content:space-between;
+}
+.plan-badge{
+  position:absolute; top:0; right:36px; background:var(--blood); color:var(--void); font-family:var(--font-mono);
+  font-size:10px; letter-spacing:.1em; padding:6px 12px; text-transform:uppercase; transform:translateY(-50%);
+}
+
+/* ============ TRAINERS ============ */
+#trainers{padding:140px 0; background:var(--void);}
+#trainers .head{margin-bottom:60px;}
+#trainers h2{font-size:clamp(40px,6vw,76px);}
+.trainer-row{display:grid; grid-template-columns:repeat(4,1fr); gap:2px; background:rgba(255,255,255,.08);}
+@media (max-width:1100px){.trainer-row{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.trainer-row{grid-template-columns:1fr;}}
+.trainer-card{
+  background:var(--void); aspect-ratio:3/4; position:relative; overflow:hidden; cursor:pointer;
+}
+.trainer-card .tbg{
+  position:absolute; inset:0; background:linear-gradient(165deg, #232019, #0a0a0a 70%);
+  transition:transform .6s cubic-bezier(.16,1,.3,1);
+}
+.trainer-card:hover .tbg{transform:scale(1.06);}
+.trainer-card .tnum{position:absolute; top:20px; left:20px; font-family:var(--font-mono); font-size:11px; color:var(--bone-dim); letter-spacing:.1em;}
+.trainer-card .tinfo{position:absolute; left:20px; bottom:22px; right:20px;}
+.trainer-card .tname{font-family:var(--font-display); font-size:24px; text-transform:uppercase; letter-spacing:.01em;}
+.trainer-card .trole{font-family:var(--font-mono); font-size:11px; color:var(--blood); letter-spacing:.1em; text-transform:uppercase; margin-top:6px;}
+.trainer-card .tline{
+  position:absolute; left:0; bottom:0; height:3px; width:0%; background:var(--blood); transition:width .5s ease;
+}
+.trainer-card:hover .tline{width:100%;}
+
+/* ============ TRANSFORMATIONS ============ */
+#transform{padding:140px 0; background:var(--charcoal); overflow:hidden;}
+#transform .head{margin-bottom:60px;}
+#transform h2{font-size:clamp(40px,6vw,76px);}
+.tf-track{display:flex; gap:24px; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:20px; -ms-overflow-style:none; scrollbar-width:none;}
+.tf-track::-webkit-scrollbar{display:none;}
+.tf-card{
+  scroll-snap-align:start; min-width:320px; flex:1 0 320px; background:#1d1b18; border:1px solid rgba(255,255,255,.08);
+  padding:0; position:relative;
+}
+.tf-visual{height:230px; position:relative; background:linear-gradient(135deg,#262219,#0e0d0b); display:flex;}
+.tf-visual .half{flex:1; display:flex; align-items:flex-end; justify-content:center; font-family:var(--font-mono); font-size:11px; color:var(--bone-dim); letter-spacing:.2em; padding-bottom:14px; position:relative;}
+.tf-visual .half:first-child{border-right:1px dashed rgba(255,255,255,.15);}
+.tf-body{padding:26px 28px 30px;}
+.tf-name{font-family:var(--font-display); font-size:20px; text-transform:uppercase;}
+.tf-meta{font-family:var(--font-mono); font-size:11px; color:var(--blood); margin:8px 0 14px; letter-spacing:.08em;}
+.tf-quote{font-size:14px; color:var(--bone-dim); line-height:1.6;}
+
+/* ============ GALLERY ============ */
+#gallery{padding:140px 0; background:var(--void);}
+#gallery .head{margin-bottom:60px;}
+#gallery h2{font-size:clamp(40px,6vw,76px);}
+.gal-grid{display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:160px; gap:6px;}
+@media (max-width:900px){.gal-grid{grid-template-columns:repeat(2,1fr); grid-auto-rows:130px;}}
+.gal-item{
+  position:relative; overflow:hidden; background:linear-gradient(150deg,#211e18,#0a0a0a);
+}
+.gal-item:nth-child(1){grid-column:span 2; grid-row:span 2;}
+.gal-item:nth-child(4){grid-column:span 2;}
+.gal-item:nth-child(7){grid-row:span 2;}
+.gal-item .gtag{
+  position:absolute; bottom:14px; left:14px; font-family:var(--font-mono); font-size:10px; letter-spacing:.15em;
+  color:var(--bone-dim); text-transform:uppercase; opacity:0; transition:opacity .4s ease;
+}
+.gal-item:hover .gtag{opacity:1;}
+.gal-item::after{
+  content:''; position:absolute; inset:0; background:radial-gradient(circle at 30% 30%, rgba(196,30,30,.18), transparent 60%);
+  opacity:0; transition:opacity .4s ease;
+}
+.gal-item:hover::after{opacity:1;}
+
+/* ============ TESTIMONIALS ============ */
+#testimonials{padding:140px 0; background:var(--charcoal); position:relative;}
+#testimonials .head{margin-bottom:56px; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:24px;}
+#testimonials h2{font-size:clamp(40px,6vw,76px);}
+.t-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.08);}
+@media (max-width:900px){.t-grid{grid-template-columns:1fr;}}
+.t-card{background:var(--charcoal); padding:36px; display:flex; flex-direction:column; gap:18px;}
+.t-stars{color:var(--blood); font-size:13px; letter-spacing:.2em;}
+.t-quote{font-size:15.5px; line-height:1.7; color:var(--bone);}
+.t-author{font-family:var(--font-mono); font-size:11px; color:var(--bone-dim); letter-spacing:.08em; text-transform:uppercase; margin-top:auto;}
+
+/* ============ BMI ============ */
+#bmi{padding:140px 0; background:var(--void);}
+.bmi-grid{display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center;}
+@media (max-width:900px){.bmi-grid{grid-template-columns:1fr; gap:46px;}}
+#bmi h2{font-size:clamp(36px,5.2vw,62px); margin-bottom:18px;}
+#bmi .lede{color:var(--bone-dim); font-size:15.5px; line-height:1.7; max-width:440px; margin-bottom:8px;}
+.bmi-panel{background:#15140f; border:1px solid rgba(255,255,255,.1); padding:38px;}
+.bmi-field{margin-bottom:24px;}
+.bmi-field label{display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--bone-dim); margin-bottom:10px;}
+.bmi-field label span{color:var(--bone);}
+.bmi-field input[type=range]{
+  width:100%; -webkit-appearance:none; height:2px; background:rgba(255,255,255,.2); outline:none;
+}
+.bmi-field input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none; width:16px; height:16px; border-radius:50%; background:var(--blood); cursor:pointer;
+  box-shadow:0 0 0 4px rgba(196,30,30,.2);
+}
+.bmi-field input[type=range]::-moz-range-thumb{width:16px; height:16px; border-radius:50%; background:var(--blood); border:none; cursor:pointer;}
+.bmi-result{margin-top:30px; border-top:1px solid rgba(255,255,255,.12); padding-top:26px; display:flex; align-items:flex-end; justify-content:space-between;}
+.bmi-result .val{font-family:var(--font-display); font-size:54px; color:var(--bone);}
+.bmi-result .cat{font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; padding:8px 14px; border:1px solid var(--blood); color:var(--blood);}
+
+/* ============ CONTACT ============ */
+#contact{padding:140px 0 100px; background:var(--charcoal); position:relative;}
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:80px;}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr; gap:50px;}}
+#contact h2{font-size:clamp(40px,6.5vw,90px); margin-bottom:24px;}
+.contact-info{display:flex; flex-direction:column; gap:26px; margin-top:34px;}
+.contact-info .row{border-top:1px solid rgba(255,255,255,.12); padding-top:18px;}
+.contact-info .label{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.15em; text-transform:uppercase; color:var(--blood); margin-bottom:8px;}
+.contact-info .val{font-size:16px; color:var(--bone);}
+.cform .f-row{display:flex; flex-direction:column; gap:8px; margin-bottom:26px;}
+.cform label{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.15em; text-transform:uppercase; color:var(--bone-dim);}
+.cform input, .cform textarea{
+  background:transparent; border:none; border-bottom:1px solid rgba(255,255,255,.25); color:var(--bone);
+  font-family:var(--font-body); font-size:16px; padding:10px 0; outline:none; transition:border-color .3s;
+}
+.cform input:focus, .cform textarea:focus{border-color:var(--blood);}
+.cform textarea{resize:none; min-height:80px;}
+.submit-btn{
+  position:relative; display:inline-flex; align-items:center; gap:14px; margin-top:10px;
+  font-family:var(--font-mono); font-size:12px; letter-spacing:.15em; text-transform:uppercase;
+  background:var(--bone); color:var(--void); padding:18px 30px; overflow:hidden;
+}
+.submit-btn .arrow{transition:transform .3s ease;}
+.submit-btn:hover .arrow{transform:translateX(6px);}
+
+/* magnetic button shared */
+.magnetic{ will-change:transform; transition:transform .15s ease-out; }
+
+/* ============ FOOTER ============ */
+footer{background:var(--void); padding:80px 0 30px; border-top:1px solid rgba(255,255,255,.08);}
+.foot-top{display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:40px; margin-bottom:60px;}
+.foot-logo{font-family:var(--font-display); font-size:clamp(40px,7vw,90px); text-transform:uppercase; letter-spacing:.01em;}
+.foot-cols{display:flex; gap:60px; flex-wrap:wrap;}
+.foot-col h4{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.15em; text-transform:uppercase; color:var(--blood); margin-bottom:16px;}
+.foot-col a, .foot-col p{display:block; font-size:14px; color:var(--bone-dim); margin-bottom:10px;}
+.foot-col a:hover{color:var(--bone);}
+.foot-bottom{display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; border-top:1px solid rgba(255,255,255,.08); padding-top:24px; font-family:var(--font-mono); font-size:11px; color:var(--bone-dim); letter-spacing:.05em;}
+
+/* fade-up util for GSAP targets default state */
+.fade-up{opacity:0; transform:translateY(50px);}
+.fade-scale{opacity:0; transform:scale(.92);}
+
+/* visually-hidden for a11y skip link */
+.skip-link{position:absolute; left:-9999px; top:0; background:var(--blood); color:#fff; padding:10px 16px; z-index:10001;}
+.skip-link:focus{left:10px; top:10px;}
+
+:focus-visible{outline:2px solid var(--blood); outline-offset:3px;}
 </style>
 </head>
 <body>
 
-<div class="noise"></div>
-<div id="cursor-dot"></div>
-<div id="cursor-ring"></div>
+<a href="#main" class="skip-link">Skip to content</a>
 
-<!-- LOADER -->
-<div class="loader-screen" id="loader">
-  <div class="font-display text-2xl md:text-3xl font-bold tracking-wide">
-    <span class="grad-text">SARVAN</span> <span style="color:var(--text)">CYBER CAFE</span>
-  </div>
-  <div class="w-56 h-[3px] rounded-full overflow-hidden" style="background:var(--surface-strong)">
-    <div id="loader-bar" class="h-full" style="width:0%;background:var(--grad-1)"></div>
-  </div>
-  <p class="text-xs tracking-widest uppercase" style="color:var(--text-dim)">Connecting your village to the world</p>
+<div id="cursor-glow"></div>
+<div id="cursor-dot"></div>
+
+<div id="loader" aria-hidden="true">
+  <div class="mark">THE SWEAT YARD</div>
+  <div class="bar"><span id="loader-bar"></span></div>
+  <div class="pct" id="loader-pct">LOADING — 0%</div>
 </div>
 
-<!-- NAVBAR -->
-<nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-6xl rounded-2xl glass-strong px-5 md:px-7 py-3 flex items-center justify-between transition-all">
-  <a href="#home" class="flex items-center gap-2.5 font-display font-bold text-lg">
-    <span class="w-9 h-9 rounded-xl flex items-center justify-center" style="background:var(--grad-1)">
-      <i data-lucide="zap" class="w-5 h-5" style="color:#04101A"></i>
-    </span>
-    <span class="hidden sm:inline">Sarvan <span class="grad-text">Cyber</span> Cafe</span>
-  </a>
-  <div class="hidden lg:flex items-center gap-7 text-sm font-medium" style="color:var(--text-dim)">
-    <a href="#services" class="hover:text-[var(--cyan)] transition">Services</a>
-    <a href="#students" class="hover:text-[var(--cyan)] transition">Student Portal</a>
-    <a href="#pricing" class="hover:text-[var(--cyan)] transition">Pricing</a>
-    <a href="#gallery" class="hover:text-[var(--cyan)] transition">Gallery</a>
-    <a href="#testimonials" class="hover:text-[var(--cyan)] transition">Reviews</a>
-    <a href="#faq" class="hover:text-[var(--cyan)] transition">FAQ</a>
-    <a href="#contact" class="hover:text-[var(--cyan)] transition">Contact</a>
-  </div>
-  <div class="flex items-center gap-2.5">
-    <button id="theme-toggle" class="w-10 h-10 rounded-xl glass flex items-center justify-center" aria-label="Toggle theme">
-      <i data-lucide="moon" class="w-4.5 h-4.5"></i>
-    </button>
-    <a href="#booking" class="btn-primary !py-2.5 !px-5 hidden md:inline-flex text-sm">Book Now <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-    <button id="menu-btn" class="lg:hidden w-10 h-10 rounded-xl glass flex items-center justify-center"><i data-lucide="menu" class="w-5 h-5"></i></button>
-  </div>
+<nav id="nav">
+  <a href="#hero" class="logo">SWEAT<span class="dot">.</span>YARD</a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#membership">Membership</a></li>
+    <li><a href="#trainers">Trainers</a></li>
+    <li><a href="#transform">Results</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#bmi">BMI</a></li>
+  </ul>
+  <a href="#contact" id="nav-cta" class="magnetic">Join Now</a>
+  <button id="nav-toggle" aria-label="Menu">MENU</button>
 </nav>
 
-<!-- MOBILE MENU -->
-<div id="mobile-menu" class="fixed inset-0 z-40 glass-strong hidden flex-col items-center justify-center gap-8 text-xl font-display">
-  <a href="#services" class="mob-link">Services</a>
-  <a href="#students" class="mob-link">Student Portal</a>
-  <a href="#pricing" class="mob-link">Pricing</a>
-  <a href="#gallery" class="mob-link">Gallery</a>
-  <a href="#testimonials" class="mob-link">Reviews</a>
-  <a href="#faq" class="mob-link">FAQ</a>
-  <a href="#contact" class="mob-link">Contact</a>
-  <a href="#booking" class="btn-primary mt-4">Book Now</a>
-</div>
+<main id="main">
 
 <!-- HERO -->
-<section id="home" class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
-  <canvas id="hero-canvas"></canvas>
-  <div class="glow-orb w-[500px] h-[500px] -top-40 -left-40" style="background:var(--cyan)"></div>
-  <div class="glow-orb w-[480px] h-[480px] bottom-0 right-0" style="background:var(--violet)"></div>
-
-  <div class="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center w-full">
-    <div>
-      <div class="fade-up inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 mb-6 text-xs font-semibold" style="color:var(--cyan)">
-        <span class="w-1.5 h-1.5 rounded-full" style="background:var(--cyan)"></span> Open Now · Toola Tivriya, Shamsabad, Agra
-      </div>
-      <h1 class="fade-up font-display font-bold text-[42px] leading-[1.08] sm:text-6xl lg:text-[64px] mb-6">
-        Your Village's <span class="grad-text">Digital</span> Gateway,<br/> Built by <span class="grad-text-2">Sarvan Singh</span>
-      </h1>
-      <p class="fade-up text-base md:text-lg mb-9 max-w-lg" style="color:var(--text-dim)">
-        From Aadhaar to Income Tax, Railway tickets to Resume design — one counter at Sarvan Cyber Cafe handles every form, every document, every deadline. No city trips required.
-      </p>
-      <div class="fade-up flex flex-wrap gap-4">
-        <a href="#booking" class="btn-primary">Book a Service <i data-lucide="calendar-check" class="w-4 h-4"></i></a>
-        <a href="https://wa.me/919115784261" target="_blank" class="btn-ghost"><i data-lucide="message-circle" class="w-4 h-4" style="color:#25D366"></i> WhatsApp Us</a>
-      </div>
-      <div class="fade-up flex items-center gap-8 mt-10">
-        <div><p class="font-display text-2xl font-bold">8000+</p><p class="text-xs" style="color:var(--text-dim)">Documents Processed</p></div>
-        <div class="w-px h-9" style="background:var(--border)"></div>
-        <div><p class="font-display text-2xl font-bold">4.9<i data-lucide="star" class="w-4 h-4 inline -mt-1" style="color:var(--marigold)"></i></p><p class="text-xs" style="color:var(--text-dim)">Customer Rating</p></div>
-        <div class="w-px h-9" style="background:var(--border)"></div>
-        <div><p class="font-display text-2xl font-bold">7+ yrs</p><p class="text-xs" style="color:var(--text-dim)">Serving Shamsabad</p></div>
-      </div>
-    </div>
-
-    <div class="fade-up relative hidden lg:block">
-      <div class="glass-strong rounded-3xl p-6 rotate-2">
-        <img src="assets/shop-front.jpg" alt="Sarvan Cyber Cafe storefront, Shamsabad, Agra" class="rounded-2xl w-full h-[420px] object-cover" />
-        <div class="absolute -bottom-8 -left-8 glass-strong rounded-2xl p-4 flex items-center gap-3 w-60 -rotate-2">
-          <div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0" style="background:var(--grad-2)"><i data-lucide="badge-check" class="w-5 h-5 text-white"></i></div>
-          <div><p class="font-semibold text-sm">Verified Service Point</p><p class="text-xs" style="color:var(--text-dim)">Aadhaar · PAN · Passport</p></div>
-        </div>
+<section id="hero" aria-label="Introduction">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div id="hero-vignette"></div>
+  <div id="hero-content">
+    <h1 id="hero-title" class="huge">
+      <span class="reveal-line"><span>IRON DOESN'T</span></span>
+      <span class="reveal-line line2"><span>NEGOTIATE.</span></span>
+    </h1>
+    <div id="hero-sub">
+      <p class="fade-up">A women-owned strength yard in Mukherjee Nagar, built for people who train like it matters. No mirrors for selfies. Just plates, sweat, and people who show up.</p>
+      <div id="hero-rating" class="fade-up">
+        <div class="num">4.8</div>
+        <div class="meta">RATED BY<br>374+ MEMBERS</div>
       </div>
     </div>
   </div>
-
-  <a href="#services" class="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-xs" style="color:var(--text-dim)">
-    Scroll <i data-lucide="chevron-down" class="w-4 h-4 animate-bounce"></i>
-  </a>
+  <div class="scroll-cue"><span>SCROLL</span><div class="line"></div></div>
 </section>
 
-<!-- MARQUEE -->
-<div class="glass border-y py-3 overflow-hidden" style="border-color:var(--border)">
-  <div class="marquee-track text-sm font-semibold" style="color:var(--text-dim)">
-    <div class="flex gap-10 pr-10">
-      <span>AADHAAR ENROLMENT</span><span class="grad-text">•</span><span>PAN CARD</span><span class="grad-text">•</span><span>PASSPORT SEVA</span><span class="grad-text">•</span><span>IRCTC TICKETS</span><span class="grad-text">•</span><span>GST FILING</span><span class="grad-text">•</span><span>INCOME TAX RETURN</span><span class="grad-text">•</span><span>SCHOLARSHIPS</span><span class="grad-text">•</span><span>PRINT &amp; SCAN</span><span class="grad-text">•</span><span>LAMINATION</span><span class="grad-text">•</span>
-      <span>AADHAAR ENROLMENT</span><span class="grad-text">•</span><span>PAN CARD</span><span class="grad-text">•</span><span>PASSPORT SEVA</span><span class="grad-text">•</span><span>IRCTC TICKETS</span><span class="grad-text">•</span><span>GST FILING</span><span class="grad-text">•</span><span>INCOME TAX RETURN</span><span class="grad-text">•</span><span>SCHOLARSHIPS</span><span class="grad-text">•</span><span>PRINT &amp; SCAN</span><span class="grad-text">•</span><span>LAMINATION</span><span class="grad-text">•</span>
-    </div>
+<div class="marquee-strip" aria-hidden="true">
+  <div class="track">
+    <span>WOMEN-OWNED</span><span>•</span><span>4.8★ / 374 REVIEWS</span><span>•</span><span>MUKHERJEE NAGAR</span><span>•</span><span>OPEN 4PM–11PM</span><span>•</span>
+    <span>WOMEN-OWNED</span><span>•</span><span>4.8★ / 374 REVIEWS</span><span>•</span><span>MUKHERJEE NAGAR</span><span>•</span><span>OPEN 4PM–11PM</span><span>•</span>
   </div>
 </div>
 
-<!-- SERVICES -->
-<section id="services" class="py-28 px-6 max-w-7xl mx-auto">
-  <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
-    <p class="section-eyebrow mb-3">What We Offer</p>
-    <h2 class="font-display font-bold text-3xl md:text-5xl mb-4">Every Service, <span class="grad-text">One Counter</span></h2>
-    <p style="color:var(--text-dim)">Government paperwork, travel, banking and printing — handled with care, accuracy, and a smile.</p>
-  </div>
-  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" id="services-grid"></div>
-</section>
-
-<!-- STUDENT PORTAL -->
-<section id="students" class="py-28 px-6 max-w-7xl mx-auto">
-  <div class="glass-strong rounded-[28px] p-8 md:p-14 relative overflow-hidden">
-    <div class="glow-orb w-72 h-72 -top-20 -right-20" style="background:var(--marigold)"></div>
-    <div class="relative z-10 grid lg:grid-cols-[1fr_1.3fr] gap-12">
-      <div class="fade-up">
-        <p class="section-eyebrow mb-3">For Students</p>
-        <h2 class="font-display font-bold text-3xl md:text-4xl mb-5">Quick Links to Every <span class="grad-text-2">Result &amp; Portal</span></h2>
-        <p style="color:var(--text-dim)" class="mb-7">University results to scholarships — we help students access and apply on every major portal, right from the cafe.</p>
-        <a href="#booking" class="btn-primary text-sm">Get Help With a Form <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="eyebrow fade-up">The Yard</div>
+      <h2 class="huge fade-up">A gym run<br>by people who<br>actually train.</h2>
+      <p class="lede fade-up">Tucked behind Batra Cinema, near Meerut Sweets, The Sweat Yard isn't built for Instagram. It's built for the 6am crowd, the post-coaching-class crowd, the "I have ten minutes before lecture" crowd — and the ones who never miss a session. Every plate, every machine, every trainer is here to make sure your hour counts.</p>
+      <div class="stat-row fade-up">
+        <div><div class="stat-num">4.8</div><div class="stat-label">Average Rating</div></div>
+        <div><div class="stat-num">374+</div><div class="stat-label">Member Reviews</div></div>
+        <div><div class="stat-num">7PD</div><div class="stat-label">Hours / Week Day</div></div>
       </div>
-      <div class="grid sm:grid-cols-2 gap-4" id="student-grid"></div>
+    </div>
+    <div class="about-card fade-scale">
+      <span class="tag">Women-Owned</span>
+      <h3>The Sweat Yard</h3>
+      <p>701, Banda Bahadur Marg, near Meerut Sweets, opposite Batra Cinema, Mukherjee Nagar, New Delhi, Delhi 110033.</p>
+      <p>"Budget-friendly gym run by a team of dedicated, friendly and nice people." — a member, 2024</p>
+      <div class="addr">
+        OPEN — 4:00 PM – 11:00 PM (SUN)<br>
+        CALL — 084482 25254<br>
+        PLUS CODE — P667+9R NEW DELHI
+      </div>
     </div>
   </div>
 </section>
 
-<!-- WHY CHOOSE US -->
-<section class="py-28 px-6 max-w-7xl mx-auto">
-  <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
-    <p class="section-eyebrow mb-3">Why Sarvan Cyber Cafe</p>
-    <h2 class="font-display font-bold text-3xl md:text-5xl">Trusted by <span class="grad-text">Shamsabad</span> Since Day One</h2>
-  </div>
-  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="why-grid"></div>
-</section>
-
-<!-- PRICING -->
-<section id="pricing" class="py-28 px-6 max-w-7xl mx-auto">
-  <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
-    <p class="section-eyebrow mb-3">Fair &amp; Transparent</p>
-    <h2 class="font-display font-bold text-3xl md:text-5xl">Simple <span class="grad-text">Pricing</span></h2>
-    <p style="color:var(--text-dim)" class="mt-4">No hidden charges — exact rate cards are also displayed at the counter.</p>
-  </div>
-  <div class="grid lg:grid-cols-3 gap-6 max-w-5xl mx-auto" id="pricing-grid"></div>
-</section>
-
-<!-- BOOKING -->
-<section id="booking" class="py-28 px-6 max-w-5xl mx-auto">
-  <div class="glass-strong rounded-[28px] p-8 md:p-14 relative overflow-hidden">
-    <div class="glow-orb w-72 h-72 -bottom-24 -left-24" style="background:var(--cyan)"></div>
-    <div class="relative z-10 grid lg:grid-cols-[1fr_1.2fr] gap-10">
-      <div class="fade-up">
-        <p class="section-eyebrow mb-3">Reserve Your Slot</p>
-        <h2 class="font-display font-bold text-3xl md:text-4xl mb-5">Book a <span class="grad-text">Service</span></h2>
-        <p style="color:var(--text-dim)" class="mb-6">Tell us what you need — we'll have it ready when you walk in. Or just message us directly.</p>
-        <div class="space-y-3 text-sm">
-          <div class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4" style="color:var(--cyan)"></i> +91 91157 84261</div>
-          <div class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4" style="color:var(--cyan)"></i> +91 80578 19648</div>
-          <div class="flex items-center gap-3"><i data-lucide="clock" class="w-4 h-4" style="color:var(--cyan)"></i> Mon–Sun, 8:00 AM – 9:00 PM</div>
-        </div>
+<!-- MEMBERSHIP -->
+<section id="membership">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow fade-up">Membership</div>
+        <h2 class="huge fade-up">Pick your<br>commitment.</h2>
       </div>
-      <form id="booking-form" class="fade-up space-y-4">
-        <div class="grid sm:grid-cols-2 gap-4">
-          <input type="text" placeholder="Full Name" required name="name" />
-          <input type="tel" placeholder="Phone Number" required name="phone" />
-        </div>
-        <select name="service" required>
-          <option value="" disabled selected>Select a Service</option>
-          <option>Aadhaar Card</option><option>PAN Card</option><option>Passport</option>
-          <option>Railway / Flight Ticket</option><option>Bill Payment</option><option>Banking</option>
-          <option>Scholarship Form</option><option>Resume Design</option><option>GST Filing</option>
-          <option>Income Tax Return</option><option>Printing / Scanning</option><option>Lamination</option><option>Other</option>
-        </select>
-        <input type="date" name="date" required />
-        <textarea rows="3" placeholder="Tell us more (optional)" name="message"></textarea>
-        <button type="submit" class="btn-primary w-full justify-center !py-3.5">Confirm Booking <i data-lucide="send" class="w-4 h-4"></i></button>
-        <p id="booking-confirm" class="text-sm hidden" style="color:var(--cyan)">✅ Got it! Opening WhatsApp to confirm your booking...</p>
-      </form>
+      <p class="fade-up" style="max-width:380px;color:var(--bone-dim);font-size:15px;line-height:1.7;">No hidden charges, no contracts you'll regret. Walk in, talk to the team, start the same day.</p>
+    </div>
+    <div class="plans">
+      <div class="plan fade-up">
+        <div class="pname">Starter</div>
+        <div class="pprice"><sup>₹</sup>1,499</div>
+        <div class="pcycle">per month</div>
+        <ul>
+          <li>Full floor access, all hours</li>
+          <li>Locker & shower access</li>
+          <li>Free fitness assessment</li>
+          <li>Group floor guidance</li>
+        </ul>
+        <div class="plan-btn"><span>Get Started</span><span>→</span></div>
+      </div>
+      <div class="plan feat fade-up">
+        <span class="plan-badge">Most Joined</span>
+        <div class="pname">Committed</div>
+        <div class="pprice"><sup>₹</sup>2,999</div>
+        <div class="pcycle">per quarter</div>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>1-on-1 trainer check-ins</li>
+          <li>Personalised program</li>
+          <li>Nutrition basics consult</li>
+          <li>Priority machine slots</li>
+        </ul>
+        <div class="plan-btn"><span>Get Started</span><span>→</span></div>
+      </div>
+      <div class="plan fade-up">
+        <div class="pname">All In</div>
+        <div class="pprice"><sup>₹</sup>9,999</div>
+        <div class="pcycle">per year</div>
+        <ul>
+          <li>Everything in Committed</li>
+          <li>Dedicated personal trainer</li>
+          <li>Monthly progress reviews</li>
+          <li>Guest passes ×4 / year</li>
+        </ul>
+        <div class="plan-btn"><span>Get Started</span><span>→</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- LIVE STATS -->
-<section class="py-24 px-6 max-w-7xl mx-auto">
-  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center" id="stats-grid"></div>
+<!-- TRAINERS -->
+<section id="trainers">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow fade-up">The Floor</div>
+      <h2 class="huge fade-up">Trainers who<br>show up early.</h2>
+    </div>
+    <div class="trainer-row">
+      <div class="trainer-card fade-up"><div class="tbg"></div><div class="tnum">01 / STRENGTH</div><div class="tinfo"><div class="tname">Rohit Sir</div><div class="trole">Strength & Form</div></div><div class="tline"></div></div>
+      <div class="trainer-card fade-up"><div class="tbg"></div><div class="tnum">02 / CONDITIONING</div><div class="tinfo"><div class="tname">Priya Mehta</div><div class="trole">Conditioning Coach</div></div><div class="tline"></div></div>
+      <div class="trainer-card fade-up"><div class="tbg"></div><div class="tnum">03 / NUTRITION</div><div class="tinfo"><div class="tname">Aman Verma</div><div class="trole">Nutrition Lead</div></div><div class="tline"></div></div>
+      <div class="trainer-card fade-up"><div class="tbg"></div><div class="tnum">04 / FLOOR HEAD</div><div class="tinfo"><div class="tname">Sneha Kapoor</div><div class="trole">Owner & Floor Head</div></div><div class="tline"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORMATIONS -->
+<section id="transform">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow fade-up">Results</div>
+      <h2 class="huge fade-up">Built here.<br>Proven here.</h2>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="tf-track">
+      <div class="tf-card fade-up">
+        <div class="tf-visual"><div class="half">BEFORE</div><div class="half">AFTER</div></div>
+        <div class="tf-body"><div class="tf-name">Karan, 24</div><div class="tf-meta">−14 KG · 8 MONTHS</div><div class="tf-quote">"Trainers actually correct your form, not just count reps with you."</div></div>
+      </div>
+      <div class="tf-card fade-up">
+        <div class="tf-visual"><div class="half">BEFORE</div><div class="half">AFTER</div></div>
+        <div class="tf-body"><div class="tf-name">Ishita, 27</div><div class="tf-meta">+6 KG LEAN MASS · 11 MONTHS</div><div class="tf-quote">"First gym where I didn't feel out of place as a beginner."</div></div>
+      </div>
+      <div class="tf-card fade-up">
+        <div class="tf-visual"><div class="half">BEFORE</div><div class="half">AFTER</div></div>
+        <div class="tf-body"><div class="tf-name">Deepak, 31</div><div class="tf-meta">−21 KG · 14 MONTHS</div><div class="tf-quote">"Budget-friendly, but the equipment never feels cheap."</div></div>
+      </div>
+      <div class="tf-card fade-up">
+        <div class="tf-visual"><div class="half">BEFORE</div><div class="half">AFTER</div></div>
+        <div class="tf-body"><div class="tf-name">Megha, 22</div><div class="tf-meta">FIRST PULL-UP · 5 MONTHS</div><div class="tf-quote">"Clean, quiet, motivating — exactly what they promise."</div></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- GALLERY -->
-<section id="gallery" class="py-28 px-6 max-w-7xl mx-auto">
-  <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
-    <p class="section-eyebrow mb-3">Take a Look Inside</p>
-    <h2 class="font-display font-bold text-3xl md:text-5xl">Our <span class="grad-text">Cafe</span></h2>
-  </div>
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-    <div class="fade-up card-hover rounded-2xl overflow-hidden glass row-span-2"><img src="assets/desk-setup.jpg" class="w-full h-full object-cover" alt="Workstation with RGB PC, dual monitor and printer at Sarvan Cyber Cafe" /></div>
-    <div class="fade-up card-hover rounded-2xl overflow-hidden glass"><img src="assets/shop-front.jpg" class="w-full h-56 object-cover" alt="Sarvan Cyber Cafe shop front sign, Shamsabad" /></div>
-    <div class="fade-up card-hover rounded-2xl glass flex items-center justify-center h-56 font-display text-lg" style="color:var(--text-dim)"><i data-lucide="printer" class="w-8 h-8 mr-2" style="color:var(--cyan)"></i>Printing Counter</div>
-    <div class="fade-up card-hover rounded-2xl glass flex items-center justify-center h-56 font-display text-lg" style="color:var(--text-dim)"><i data-lucide="id-card" class="w-8 h-8 mr-2" style="color:var(--violet)"></i>Aadhaar &amp; PAN Desk</div>
-    <div class="fade-up card-hover rounded-2xl glass flex items-center justify-center h-56 font-display text-lg" style="color:var(--text-dim)"><i data-lucide="ticket" class="w-8 h-8 mr-2" style="color:var(--marigold)"></i>Ticket Booking</div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section id="team" class="py-28 px-6 max-w-5xl mx-auto text-center">
-  <p class="section-eyebrow mb-3 fade-up">Meet the Owner</p>
-  <h2 class="font-display font-bold text-3xl md:text-5xl mb-14 fade-up">The Face Behind <span class="grad-text">Sarvan Cyber Cafe</span></h2>
-  <div class="fade-up glass-strong rounded-[28px] p-10 max-w-md mx-auto card-hover">
-    <div class="w-28 h-28 rounded-full mx-auto mb-5 flex items-center justify-center font-display text-3xl font-bold" style="background:var(--grad-1);color:#04101A">SS</div>
-    <h3 class="font-display font-bold text-2xl mb-1">Sarvan Singh</h3>
-    <p class="mb-4" style="color:var(--cyan)">Founder &amp; Owner</p>
-    <p class="text-sm" style="color:var(--text-dim)">Running Sarvan Cyber Cafe in Toola Tivriya, Shamsabad for over 7 years — helping every villager get their documents done right, the first time.</p>
-    <div class="flex justify-center gap-3 mt-6">
-      <a href="tel:+919115784261" class="w-10 h-10 rounded-xl glass flex items-center justify-center"><i data-lucide="phone" class="w-4 h-4"></i></a>
-      <a href="https://wa.me/919115784261" target="_blank" class="w-10 h-10 rounded-xl glass flex items-center justify-center"><i data-lucide="message-circle" class="w-4 h-4" style="color:#25D366"></i></a>
+<section id="gallery">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow fade-up">Inside The Yard</div>
+      <h2 class="huge fade-up">The floor,<br>up close.</h2>
+    </div>
+    <div class="gal-grid">
+      <div class="gal-item fade-scale"><span class="gtag">Free Weights</span></div>
+      <div class="gal-item fade-scale"><span class="gtag">Cardio Line</span></div>
+      <div class="gal-item fade-scale"><span class="gtag">Squat Racks</span></div>
+      <div class="gal-item fade-scale"><span class="gtag">Reception</span></div>
+      <div class="gal-item fade-scale"><span class="gtag">Functional Zone</span></div>
+      <div class="gal-item fade-scale"><span class="gtag">Locker Room</span></div>
+      <div class="gal-item fade-scale"><span class="gtag">Machine Floor</span></div>
+      <div class="gal-item fade-scale"><span class="gtag">Stretch Area</span></div>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section id="testimonials" class="py-28 px-6 max-w-7xl mx-auto">
-  <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
-    <p class="section-eyebrow mb-3">Customer Stories</p>
-    <h2 class="font-display font-bold text-3xl md:text-5xl">What People <span class="grad-text">Say</span></h2>
+<section id="testimonials">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div class="eyebrow fade-up">374+ Reviews</div>
+        <h2 class="huge fade-up">What the<br>yard says.</h2>
+      </div>
+    </div>
+    <div class="t-grid">
+      <div class="t-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-quote">"Staff is very helpful, great place for workout, trainers also good."</div>
+        <div class="t-author">— Google Review</div>
+      </div>
+      <div class="t-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-quote">"I've been a member for the past 6 months and I'm extremely satisfied. The equipment is top-notch and the atmosphere is clean, quiet, and motivating."</div>
+        <div class="t-author">— Arti Yadav, Local Guide</div>
+      </div>
+      <div class="t-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-quote">"One state of art facility. Splendid services, exquisite infrastructure."</div>
+        <div class="t-author">— Google Review</div>
+      </div>
+      <div class="t-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-quote">"The gym is very hygienic. The staff is very helpful and co-operative. Ample equipment is provided."</div>
+        <div class="t-author">— Puhenba Sharma</div>
+      </div>
+      <div class="t-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-quote">"The equipment is well maintained, the environment is clean and motivating, and the trainers are very knowledgeable and supportive."</div>
+        <div class="t-author">— Satyendra Vijay Singh</div>
+      </div>
+      <div class="t-card fade-up">
+        <div class="t-stars">★★★★★</div>
+        <div class="t-quote">"Budget-friendly gym run by a team of dedicated, friendly and nice people."</div>
+        <div class="t-author">— Google Review</div>
+      </div>
+    </div>
   </div>
-  <div class="grid md:grid-cols-3 gap-6" id="testimonial-grid"></div>
 </section>
 
-<!-- BLOG -->
-<section id="blog" class="py-28 px-6 max-w-7xl mx-auto">
-  <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
-    <p class="section-eyebrow mb-3">Stay Informed</p>
-    <h2 class="font-display font-bold text-3xl md:text-5xl">Latest <span class="grad-text">Updates</span></h2>
+<!-- BMI -->
+<section id="bmi">
+  <div class="wrap bmi-grid">
+    <div>
+      <div class="eyebrow fade-up">Know Your Numbers</div>
+      <h2 class="huge fade-up">Where are<br>you starting?</h2>
+      <p class="lede fade-up">A quick BMI check isn't a verdict — it's a starting line. Bring this number in and our trainers will build the actual plan.</p>
+    </div>
+    <div class="bmi-panel fade-scale">
+      <div class="bmi-field">
+        <label>Height <span id="hVal">170 cm</span></label>
+        <input type="range" id="height" min="140" max="210" value="170">
+      </div>
+      <div class="bmi-field">
+        <label>Weight <span id="wVal">70 kg</span></label>
+        <input type="range" id="weight" min="35" max="150" value="70">
+      </div>
+      <div class="bmi-result">
+        <div>
+          <div class="val" id="bmiVal">24.2</div>
+        </div>
+        <div class="cat" id="bmiCat">NORMAL</div>
+      </div>
+    </div>
   </div>
-  <div class="grid md:grid-cols-3 gap-6" id="blog-grid"></div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="py-28 px-6 max-w-3xl mx-auto">
-  <div class="text-center mb-14 fade-up">
-    <p class="section-eyebrow mb-3">Got Questions?</p>
-    <h2 class="font-display font-bold text-3xl md:text-5xl">Frequently Asked</h2>
-  </div>
-  <div class="space-y-3" id="faq-list"></div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-28 px-6 max-w-7xl mx-auto">
-  <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
-    <p class="section-eyebrow mb-3">Visit Us</p>
-    <h2 class="font-display font-bold text-3xl md:text-5xl">Find <span class="grad-text">Sarvan Cyber Cafe</span></h2>
-  </div>
-  <div class="grid lg:grid-cols-2 gap-6">
-    <div class="fade-up rounded-2xl overflow-hidden glass h-[420px]">
-      <iframe
-        src="https://www.google.com/maps?q=Sarvan+Cyber+Cafe+Toola+Tivriya+Shamsabad+Agra&output=embed"
-        width="100%" height="100%" style="border:0;filter:invert(.9) hue-rotate(180deg)" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade" title="Sarvan Cyber Cafe location on Google Maps"></iframe>
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="eyebrow fade-up">Visit The Yard</div>
+      <h2 class="huge fade-up">Come see<br>it yourself.</h2>
+      <div class="contact-info fade-up">
+        <div class="row"><div class="label">Address</div><div class="val">701, Banda Bahadur Marg, near Meerut Sweets, opposite Batra Cinema, Mukherjee Nagar, New Delhi, Delhi 110033</div></div>
+        <div class="row"><div class="label">Phone</div><div class="val">084482 25254</div></div>
+        <div class="row"><div class="label">Hours</div><div class="val">4:00 PM – 11:00 PM (Sunday)</div></div>
+        <div class="row"><div class="label">Plus Code</div><div class="val">P667+9R New Delhi, Delhi</div></div>
+      </div>
     </div>
-    <div class="fade-up glass-strong rounded-2xl p-8 space-y-6">
-      <div class="flex gap-4">
-        <div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0" style="background:var(--grad-1)"><i data-lucide="map-pin" class="w-5 h-5" style="color:#04101A"></i></div>
-        <div><p class="font-semibold mb-1">Address</p><p style="color:var(--text-dim)" class="text-sm">Ram Laxman Milky Market, Toola Tivriya, Rajarheda Road, Shamsabad, Agra</p></div>
-      </div>
-      <div class="flex gap-4">
-        <div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0" style="background:var(--grad-2)"><i data-lucide="phone" class="w-5 h-5 text-white"></i></div>
-        <div><p class="font-semibold mb-1">Phone</p><p style="color:var(--text-dim)" class="text-sm">+91 91157 84261 · +91 80578 19648</p></div>
-      </div>
-      <div class="flex gap-4">
-        <div class="w-11 h-11 rounded-xl flex items-center justify-center shrink-0" style="background:var(--grad-1)"><i data-lucide="clock" class="w-5 h-5" style="color:#04101A"></i></div>
-        <div><p class="font-semibold mb-1">Hours</p><p style="color:var(--text-dim)" class="text-sm">Monday – Sunday, 8:00 AM – 9:00 PM</p></div>
-      </div>
-      <a href="https://wa.me/919115784261" target="_blank" class="btn-primary w-full justify-center !py-3.5"><i data-lucide="message-circle" class="w-4 h-4"></i> Chat on WhatsApp</a>
-    </div>
+    <form class="cform fade-up" id="contact-form">
+      <div class="f-row"><label for="cf-name">Name</label><input id="cf-name" type="text" required placeholder="Your name"></div>
+      <div class="f-row"><label for="cf-phone">Phone</label><input id="cf-phone" type="tel" required placeholder="10-digit number"></div>
+      <div class="f-row"><label for="cf-msg">Message</label><textarea id="cf-msg" placeholder="Tell us your goal"></textarea></div>
+      <button type="submit" class="submit-btn magnetic"><span id="submit-label">Request a Trial Pass</span><span class="arrow">→</span></button>
+    </form>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="border-t py-14 px-6" style="border-color:var(--border)">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
-    <div>
-      <div class="flex items-center gap-2.5 font-display font-bold text-lg mb-4">
-        <span class="w-9 h-9 rounded-xl flex items-center justify-center" style="background:var(--grad-1)"><i data-lucide="zap" class="w-5 h-5" style="color:#04101A"></i></span>
-        Sarvan Cyber Cafe
-      </div>
-      <p class="text-sm" style="color:var(--text-dim)">Jai Saraswati Maa. Jai Shri Ram. Serving Shamsabad with every digital service, honestly and on time.</p>
-    </div>
-    <div>
-      <p class="font-semibold mb-4">Quick Links</p>
-      <div class="flex flex-col gap-2 text-sm" style="color:var(--text-dim)">
-        <a href="#services" class="hover:text-[var(--cyan)]">Services</a>
-        <a href="#students" class="hover:text-[var(--cyan)]">Student Portal</a>
-        <a href="#pricing" class="hover:text-[var(--cyan)]">Pricing</a>
-        <a href="#booking" class="hover:text-[var(--cyan)]">Book a Service</a>
-      </div>
-    </div>
-    <div>
-      <p class="font-semibold mb-4">Services</p>
-      <div class="flex flex-col gap-2 text-sm" style="color:var(--text-dim)">
-        <span>Aadhaar &amp; PAN</span><span>Passport Seva</span><span>Railway / Flight Tickets</span><span>GST &amp; Income Tax</span>
-      </div>
-    </div>
-    <div>
-      <p class="font-semibold mb-4">Contact</p>
-      <div class="flex flex-col gap-2 text-sm" style="color:var(--text-dim)">
-        <span>Toola Tivriya, Shamsabad, Agra</span>
-        <span>+91 91157 84261</span>
-        <span>+91 80578 19648</span>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-logo">SWEAT YARD</div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Navigate</h4>
+          <a href="#about">About</a>
+          <a href="#membership">Membership</a>
+          <a href="#trainers">Trainers</a>
+          <a href="#gallery">Gallery</a>
+        </div>
+        <div class="foot-col">
+          <h4>Contact</h4>
+          <p>084482 25254</p>
+          <p>Mukherjee Nagar, Delhi</p>
+        </div>
+        <div class="foot-col">
+          <h4>Hours</h4>
+          <p>Mon–Sat: 6AM–11PM</p>
+          <p>Sun: 4PM–11PM</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="max-w-7xl mx-auto mt-10 pt-6 border-t flex flex-col sm:flex-row justify-between items-center gap-3 text-xs" style="border-color:var(--border);color:var(--text-dim)">
-    <p>© <span id="year"></span> Sarvan Cyber Cafe. All rights reserved.</p>
-    <p>Owned &amp; Operated by Sarvan Singh</p>
+    <div class="foot-bottom">
+      <span>© 2026 THE SWEAT YARD. ALL RIGHTS RESERVED.</span>
+      <span>4.8★ FROM 374+ MEMBERS</span>
+    </div>
   </div>
 </footer>
 
-<a href="https://wa.me/919115784261" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl" style="background:#25D366" aria-label="Chat on WhatsApp">
-  <i data-lucide="message-circle" class="w-6 h-6 text-white"></i>
-</a>
+<script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
 <script>
-lucide.createIcons();
-gsap.registerPlugin(ScrollTrigger);
-document.getElementById('year').textContent = new Date().getFullYear();
-
-/* ---------- LOADER ---------- */
+/* ===================== LOADER ===================== */
 window.addEventListener('load', () => {
-  gsap.to('#loader-bar', {width:'100%', duration:1.1, ease:'power2.inOut'});
-  gsap.to('#loader', {opacity:0, duration:.6, delay:1.2, onComplete:()=>{
-    document.getElementById('loader').style.display='none';
-    initScrollAnims();
-  }});
+  let pct = 0;
+  const bar = document.getElementById('loader-bar');
+  const pctEl = document.getElementById('loader-pct');
+  const iv = setInterval(()=>{
+    pct += Math.random()*18;
+    if(pct>=100){ pct=100; clearInterval(iv); }
+    bar.style.width = pct+'%';
+    pctEl.textContent = 'LOADING — '+Math.floor(pct)+'%';
+    if(pct===100){
+      setTimeout(()=>{
+        gsap.to('#loader', {opacity:0, duration:.7, ease:'power2.out', onComplete:()=>{
+          document.getElementById('loader').style.display='none';
+          runIntro();
+        }});
+      }, 250);
+    }
+  }, 140);
 });
 
-/* ---------- CUSTOM CURSOR ---------- */
-const dot = document.getElementById('cursor-dot'), ring = document.getElementById('cursor-ring');
-window.addEventListener('mousemove', e=>{
-  dot.style.left = e.clientX+'px'; dot.style.top = e.clientY+'px';
-  gsap.to(ring,{left:e.clientX, top:e.clientY, duration:.25, ease:'power3.out'});
-});
-document.querySelectorAll('a,button,input,textarea,select').forEach(el=>{
-  el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-grow'));
-  el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-grow'));
-});
-
-/* ---------- THEME TOGGLE ---------- */
-const themeBtn = document.getElementById('theme-toggle');
-themeBtn.addEventListener('click', ()=>{
-  document.documentElement.classList.toggle('light');
-  const isLight = document.documentElement.classList.contains('light');
-  themeBtn.innerHTML = isLight ? '<i data-lucide="sun" class="w-4.5 h-4.5"></i>' : '<i data-lucide="moon" class="w-4.5 h-4.5"></i>';
-  lucide.createIcons();
+/* ===================== CURSOR ===================== */
+const cGlow = document.getElementById('cursor-glow');
+const cDot = document.getElementById('cursor-dot');
+let mx=window.innerWidth/2, my=window.innerHeight/2, gx=mx, gy=my;
+window.addEventListener('mousemove', e=>{ mx=e.clientX; my=e.clientY; cDot.style.left=mx+'px'; cDot.style.top=my+'px'; });
+(function loopCursor(){ gx += (mx-gx)*0.12; gy += (my-gy)*0.12; cGlow.style.left=gx+'px'; cGlow.style.top=gy+'px'; requestAnimationFrame(loopCursor); })();
+document.querySelectorAll('a,button,.plan,.trainer-card,.gal-item,input,textarea').forEach(el=>{
+  el.addEventListener('mouseenter', ()=>cDot.classList.add('hover'));
+  el.addEventListener('mouseleave', ()=>cDot.classList.remove('hover'));
 });
 
-/* ---------- MOBILE MENU ---------- */
-const menuBtn = document.getElementById('menu-btn'), mobMenu = document.getElementById('mobile-menu');
-menuBtn.addEventListener('click', ()=>{
-  mobMenu.classList.toggle('hidden'); mobMenu.classList.toggle('flex');
-  menuBtn.innerHTML = mobMenu.classList.contains('hidden') ? '<i data-lucide="menu" class="w-5 h-5"></i>' : '<i data-lucide="x" class="w-5 h-5"></i>';
-  lucide.createIcons();
-});
-document.querySelectorAll('.mob-link').forEach(l=>l.addEventListener('click',()=>{mobMenu.classList.add('hidden');mobMenu.classList.remove('flex');menuBtn.innerHTML='<i data-lucide="menu" class="w-5 h-5"></i>';lucide.createIcons();}));
-
-/* ---------- DATA: SERVICES ---------- */
-const services = [
-  ['printer','Printing & Scanning','Black/white, color prints, scans & document copies.'],
-  ['fingerprint','Aadhaar Services','New enrolment, updates & corrections.'],
-  ['credit-card','PAN Card','Fresh PAN application & corrections.'],
-  ['book-open','Passport Seva','Application, appointment & form filling.'],
-  ['train','Railway / Flight Tickets','IRCTC & flight bookings made easy.'],
-  ['receipt','Bill Payments','Electricity, water, mobile & DTH recharge.'],
-  ['landmark','Banking Services','Account opening assistance & online banking help.'],
-  ['graduation-cap','Scholarships','NSP & state scholarship form filling.'],
-  ['file-user','Resume Design','Professional resumes & cover letters.'],
-  ['file-spreadsheet','GST Filing','GST registration & monthly return filing.'],
-  ['banknote','Income Tax','ITR filing for individuals & small businesses.'],
-  ['layers','Lamination & Binding','ID lamination, spiral & hard binding.'],
-];
-document.getElementById('services-grid').innerHTML = services.map(([icon,title,desc])=>`
-  <div class="fade-up glass card-hover rounded-2xl p-6">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:var(--grad-1)">
-      <i data-lucide="${icon}" class="w-5.5 h-5.5" style="color:#04101A"></i>
-    </div>
-    <h3 class="font-display font-semibold text-lg mb-2">${title}</h3>
-    <p class="text-sm" style="color:var(--text-dim)">${desc}</p>
-  </div>`).join('');
-
-/* ---------- STUDENT PORTAL ---------- */
-const studentLinks = [
-  ['school','University Results','Check your semester results instantly.'],
-  ['list-checks','Sarkari Result','Govt exam results & notifications.'],
-  ['fingerprint','UIDAI','Aadhaar updates & e-Aadhaar download.'],
-  ['folder-open','DigiLocker','Digital document wallet access.'],
-  ['train-front','IRCTC','Book railway tickets for travel.'],
-  ['car-front','Parivahan','Driving licence & vehicle services.'],
-  ['graduation-cap','NSP','National Scholarship Portal applications.'],
-  ['file-check-2','Other Govt Portals','Any e-service you need — just ask.'],
-];
-document.getElementById('student-grid').innerHTML = studentLinks.map(([icon,title,desc])=>`
-  <div class="fade-up glass card-hover rounded-2xl p-5">
-    <i data-lucide="${icon}" class="w-5 h-5 mb-3" style="color:var(--marigold)"></i>
-    <h4 class="font-semibold text-sm mb-1">${title}</h4>
-    <p class="text-xs" style="color:var(--text-dim)">${desc}</p>
-  </div>`).join('');
-
-/* ---------- WHY CHOOSE US ---------- */
-const why = [
-  ['shield-check','Trusted & Verified','7+ years of accurate, honest document service in Shamsabad.'],
-  ['gauge','Fast Turnaround','Most forms and prints completed while you wait.'],
-  ['indian-rupee','Fair Pricing','Transparent rate card — no surprise charges, ever.'],
-  ['heart-handshake','Personal Guidance','We explain every form in your language, step by step.'],
-];
-document.getElementById('why-grid').innerHTML = why.map(([icon,title,desc])=>`
-  <div class="fade-up glass card-hover rounded-2xl p-7 text-center">
-    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5" style="background:var(--grad-2)">
-      <i data-lucide="${icon}" class="w-6 h-6 text-white"></i>
-    </div>
-    <h3 class="font-display font-semibold mb-2">${title}</h3>
-    <p class="text-sm" style="color:var(--text-dim)">${desc}</p>
-  </div>`).join('');
-
-/* ---------- PRICING ---------- */
-const plans = [
-  ['Basic','₹10','per B/W print or scan',['Black & white printing','Document scanning','Photocopy','Lamination (per page extra)'],false],
-  ['Document Pro','₹50–₹150','per government form',['Aadhaar / PAN / Passport help','Form filling & submission','Photo + document prep','Status tracking assistance'],true],
-  ['Business','Custom','for GST & ITR clients',['Monthly GST return filing','Income Tax filing','Bookkeeping support','Priority service'],false],
-];
-document.getElementById('pricing-grid').innerHTML = plans.map(([name,price,sub,feats,featured])=>`
-  <div class="fade-up rounded-2xl p-8 card-hover ${featured? 'glass-strong relative':'glass'}" style="${featured?'border:1px solid var(--cyan)':''}">
-    ${featured?'<span class="absolute -top-3 right-6 text-xs font-bold px-3 py-1 rounded-full" style="background:var(--grad-1);color:#04101A">MOST POPULAR</span>':''}
-    <h3 class="font-display font-semibold text-xl mb-1">${name}</h3>
-    <p class="text-sm mb-5" style="color:var(--text-dim)">${sub}</p>
-    <p class="font-display text-4xl font-bold mb-6">${price}</p>
-    <ul class="space-y-3 mb-8 text-sm">
-      ${feats.map(f=>`<li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4" style="color:var(--cyan)"></i>${f}</li>`).join('')}
-    </ul>
-    <a href="#booking" class="${featured?'btn-primary':'btn-ghost'} w-full justify-center">Choose Plan</a>
-  </div>`).join('');
-
-/* ---------- STATS ---------- */
-const stats = [['8,000+','Documents Processed'],['3,200+','Happy Customers'],['7+','Years of Service'],['12+','Services Offered']];
-document.getElementById('stats-grid').innerHTML = stats.map(([num,label])=>`
-  <div class="fade-up glass rounded-2xl p-8">
-    <p class="stat-num text-4xl mb-2 grad-text" data-count="${num}">0</p>
-    <p class="text-sm" style="color:var(--text-dim)">${label}</p>
-  </div>`).join('');
-
-/* ---------- TESTIMONIALS ---------- */
-const testimonials = [
-  ['Ramesh Yadav','Local Farmer','Sarvan ji helped me get my PAN card and bank KYC done in one visit. Very polite and quick service.'],
-  ['Priya Sharma','College Student','Got my scholarship form and university result both done here. Saved me a trip to Agra city!'],
-  ['Mohan Lal','Shopkeeper','GST filing every month is smooth and on time. Trustworthy and fair pricing.'],
-];
-document.getElementById('testimonial-grid').innerHTML = testimonials.map(([name,role,text])=>`
-  <div class="fade-up glass card-hover rounded-2xl p-7">
-    <div class="flex gap-1 mb-4">${'<i data-lucide="star" class="w-4 h-4" style="color:var(--marigold)"></i>'.repeat(5)}</div>
-    <p class="text-sm mb-6" style="color:var(--text-dim)">"${text}"</p>
-    <div class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm" style="background:var(--grad-1);color:#04101A">${name.split(' ').map(n=>n[0]).join('')}</div>
-      <div><p class="font-semibold text-sm">${name}</p><p class="text-xs" style="color:var(--text-dim)">${role}</p></div>
-    </div>
-  </div>`).join('');
-
-/* ---------- BLOG ---------- */
-const blogs = [
-  ['megaphone','New: Same-Day Passport Form Assistance','We now help fill and submit Passport Seva appointments same-day at the counter.'],
-  ['calendar','Scholarship Deadline Reminder','NSP renewal deadline approaching — bring your documents early to avoid the rush.'],
-  ['bell','Aadhaar Update Camp This Month','Free guidance camp for Aadhaar address & mobile number updates — ask at the counter.'],
-];
-document.getElementById('blog-grid').innerHTML = blogs.map(([icon,title,desc])=>`
-  <div class="fade-up glass card-hover rounded-2xl p-7">
-    <i data-lucide="${icon}" class="w-6 h-6 mb-4" style="color:var(--cyan)"></i>
-    <h3 class="font-display font-semibold mb-2">${title}</h3>
-    <p class="text-sm" style="color:var(--text-dim)">${desc}</p>
-  </div>`).join('');
-
-/* ---------- FAQ ---------- */
-const faqs = [
-  ['Do I need to bring original documents?','Yes, please bring original ID proofs (Aadhaar, voter ID, etc.) along with photocopies for most government services.'],
-  ['How long does Aadhaar/PAN processing take?','Form submission takes 15–30 minutes at the counter. Government processing time varies (usually 7–15 working days).'],
-  ['Can I book an appointment in advance?','Yes — use the booking form above or message us on WhatsApp, and we will have everything ready when you arrive.'],
-  ['Do you accept digital payments?','Yes, we accept cash as well as UPI/digital payments for all services.'],
-  ['Is lamination available for all card sizes?','Yes — we laminate ID cards, certificates, and A4 documents at the counter.'],
-];
-document.getElementById('faq-list').innerHTML = faqs.map(([q,a])=>`
-  <details class="accordion-item fade-up glass rounded-2xl p-5 cursor-pointer">
-    <summary class="flex items-center justify-between font-medium list-none">
-      ${q} <i data-lucide="plus" class="acc-icon w-4 h-4 shrink-0 ml-3"></i>
-    </summary>
-    <p class="text-sm mt-3" style="color:var(--text-dim)">${a}</p>
-  </details>`).join('');
-
-lucide.createIcons();
-
-/* ---------- BOOKING FORM ---------- */
-document.getElementById('booking-form').addEventListener('submit', function(e){
-  e.preventDefault();
-  const f = new FormData(this);
-  const msg = `Hello Sarvan Cyber Cafe, I'd like to book a service:%0AName: ${f.get('name')}%0APhone: ${f.get('phone')}%0AService: ${f.get('service')}%0ADate: ${f.get('date')}%0ANote: ${f.get('message')||'-'}`;
-  document.getElementById('booking-confirm').classList.remove('hidden');
-  setTimeout(()=>window.open(`https://wa.me/919115784261?text=${msg}`,'_blank'), 600);
-  this.reset();
-});
-
-/* ---------- SCROLL ANIMATIONS ---------- */
-function initScrollAnims(){
-  gsap.utils.toArray('.fade-up').forEach((el,i)=>{
-    gsap.to(el,{opacity:1,y:0,duration:.9,ease:'power3.out',delay:(i%4)*0.05,
-      scrollTrigger:{trigger:el,start:'top 88%'}});
+/* ===================== MAGNETIC BUTTONS ===================== */
+document.querySelectorAll('.magnetic').forEach(btn=>{
+  btn.addEventListener('mousemove', e=>{
+    const r = btn.getBoundingClientRect();
+    const x = e.clientX - r.left - r.width/2;
+    const y = e.clientY - r.top - r.height/2;
+    btn.style.transform = `translate(${x*0.25}px, ${y*0.4}px)`;
   });
-  // navbar shrink
-  ScrollTrigger.create({start:50,end:99999,onUpdate:self=>{
-    document.getElementById('navbar').style.boxShadow = self.scroll()>40 ? '0 10px 40px -10px rgba(0,0,0,.4)' : 'none';
-  }});
-  // counters
-  document.querySelectorAll('.stat-num').forEach(el=>{
-    const target = el.dataset.count;
-    const num = parseInt(target.replace(/[^0-9]/g,''))||0;
-    const suffix = target.replace(/[0-9,]/g,'');
-    ScrollTrigger.create({trigger:el, start:'top 90%', once:true, onEnter:()=>{
-      gsap.to({val:0},{val:num,duration:1.6,ease:'power2.out',onUpdate:function(){
-        el.textContent = Math.floor(this.targets()[0].val).toLocaleString()+suffix;
-      }});
-    }});
+  btn.addEventListener('mouseleave', ()=>{ btn.style.transform='translate(0,0)'; });
+});
+
+/* ===================== LENIS SMOOTH SCROLL ===================== */
+let lenis;
+try{
+  lenis = new Lenis({ duration:1.1, smoothWheel:true, lerp:0.1 });
+  function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
+  requestAnimationFrame(raf);
+  lenis.on('scroll', ()=>{ if(window.ScrollTrigger) ScrollTrigger.update(); });
+}catch(e){ console.warn('Lenis unavailable', e); }
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const id = a.getAttribute('href');
+    if(id.length>1){
+      e.preventDefault();
+      const target = document.querySelector(id);
+      if(target){ lenis ? lenis.scrollTo(target, {offset:-60}) : target.scrollIntoView({behavior:'smooth'}); }
+    }
   });
+});
+
+/* ===================== NAV SCROLLED STATE ===================== */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', ()=>{ nav.classList.toggle('scrolled', window.scrollY>40); });
+
+/* ===================== GSAP SCROLLTRIGGER REVEALS ===================== */
+gsap.registerPlugin(ScrollTrigger);
+
+function runIntro(){
+  gsap.to('.reveal-line > span', {
+    y:0, duration:1.1, ease:'power4.out', stagger:0.1, delay:0.1
+  });
+  gsap.to('#hero-sub .fade-up', { opacity:1, y:0, duration:1, delay:0.5, stagger:0.1, ease:'power3.out' });
 }
 
-/* ---------- THREE.JS HERO ---------- */
+gsap.utils.toArray('.fade-up').forEach(el=>{
+  if(el.closest('#hero-sub')) return;
+  gsap.fromTo(el, {opacity:0, y:50}, {
+    opacity:1, y:0, duration:0.9, ease:'power3.out',
+    scrollTrigger:{ trigger:el, start:'top 88%' }
+  });
+});
+gsap.utils.toArray('.fade-scale').forEach(el=>{
+  gsap.fromTo(el, {opacity:0, scale:0.92}, {
+    opacity:1, scale:1, duration:0.9, ease:'power3.out',
+    scrollTrigger:{ trigger:el, start:'top 88%' }
+  });
+});
+
+/* stagger numbers count-up for stat-row */
+gsap.utils.toArray('.stat-num').forEach(el=>{
+  const text = el.textContent;
+  const num = parseFloat(text);
+  if(isNaN(num)) return;
+  const suffix = text.replace(/[0-9.]/g,'');
+  gsap.fromTo(el, {textContent:0}, {
+    textContent:num, duration:1.6, ease:'power2.out', snap:{textContent: (num%1===0)?1:0.1},
+    scrollTrigger:{ trigger:el, start:'top 90%' },
+    onUpdate(){ el.textContent = (num%1===0? Math.floor(this.targets()[0].textContent): parseFloat(this.targets()[0].textContent).toFixed(1)) + suffix; }
+  });
+});
+
+/* parallax on hero canvas wrapper via scroll */
+gsap.to('#hero-canvas', { yPercent: 18, ease:'none', scrollTrigger:{ trigger:'#hero', start:'top top', end:'bottom top', scrub:true } });
+
+/* ===================== THREE.JS HERO SCENE ===================== */
 (function(){
   const canvas = document.getElementById('hero-canvas');
-  const renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(55, window.innerWidth/window.innerHeight, .1, 100);
-  camera.position.z = 6;
-  function resize(){
-    renderer.setSize(window.innerWidth, canvas.parentElement.offsetHeight);
-    camera.aspect = window.innerWidth/canvas.parentElement.offsetHeight;
-    camera.updateProjectionMatrix();
+  scene.fog = new THREE.FogExp2(0x0a0a0a, 0.045);
+
+  const camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 0.1, 100);
+  camera.position.set(0, 1.4, 9);
+
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias:true, alpha:true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(window.innerWidth, window.innerHeight);
+
+  // Lighting
+  const ambient = new THREE.AmbientLight(0x44403a, 0.6);
+  scene.add(ambient);
+  const keyLight = new THREE.SpotLight(0xff4d4d, 8, 30, Math.PI/6, 0.4, 1.2);
+  keyLight.position.set(4, 6, 6);
+  scene.add(keyLight);
+  const rimLight = new THREE.DirectionalLight(0xcdb079, 0.8);
+  rimLight.position.set(-6, 3, -4);
+  scene.add(rimLight);
+  const fillLight = new THREE.PointLight(0xffffff, 0.5, 20);
+  fillLight.position.set(0, -2, 4);
+  scene.add(fillLight);
+
+  // Materials
+  const matMetal = new THREE.MeshStandardMaterial({ color:0x2a2a2a, metalness:0.9, roughness:0.28 });
+  const matPlate = new THREE.MeshStandardMaterial({ color:0x0d0d0d, metalness:0.6, roughness:0.45 });
+  const matRed = new THREE.MeshStandardMaterial({ color:0xc41e1e, metalness:0.4, roughness:0.4, emissive:0x550000, emissiveIntensity:0.3 });
+
+  // Barbell group
+  const barbell = new THREE.Group();
+  const barGeo = new THREE.CylinderGeometry(0.05, 0.05, 6, 16);
+  barGeo.rotateZ(Math.PI/2);
+  const bar = new THREE.Mesh(barGeo, matMetal);
+  barbell.add(bar);
+
+  function plateStack(xOffset){
+    const group = new THREE.Group();
+    const radii = [0.9, 0.75, 0.6];
+    radii.forEach((r,i)=>{
+      const geo = new THREE.CylinderGeometry(r, r, 0.12, 32);
+      geo.rotateZ(Math.PI/2);
+      const mesh = new THREE.Mesh(geo, i===0?matRed:matPlate);
+      mesh.position.x = xOffset + (i*0.14*(xOffset>0?1:-1));
+      group.add(mesh);
+    });
+    return group;
   }
-  resize(); window.addEventListener('resize', resize);
+  barbell.add(plateStack(2.6));
+  barbell.add(plateStack(-2.6));
+  barbell.rotation.z = 0.12;
+  barbell.position.y = 0.2;
+  scene.add(barbell);
 
-  const group = new THREE.Group();
-  scene.add(group);
-
-  // core sphere
-  const coreGeo = new THREE.IcosahedronGeometry(1.3, 1);
-  const coreMat = new THREE.MeshBasicMaterial({color:0x22e3ff, wireframe:true, transparent:true, opacity:.55});
-  const core = new THREE.Mesh(coreGeo, coreMat);
-  group.add(core);
-
-  const innerGeo = new THREE.IcosahedronGeometry(0.85, 0);
-  const innerMat = new THREE.MeshBasicMaterial({color:0x8b5cf6, wireframe:true, transparent:true, opacity:.5});
-  group.add(new THREE.Mesh(innerGeo, innerMat));
-
-  // orbiting points (particles ring)
-  const ptsGeo = new THREE.BufferGeometry();
-  const count = 250;
-  const positions = new Float32Array(count*3);
-  for(let i=0;i<count;i++){
-    const r = 2.4 + Math.random()*1.6;
-    const theta = Math.random()*Math.PI*2;
-    const phi = Math.acos(2*Math.random()-1);
-    positions[i*3] = r*Math.sin(phi)*Math.cos(theta);
-    positions[i*3+1] = r*Math.sin(phi)*Math.sin(theta)*0.6;
-    positions[i*3+2] = r*Math.cos(phi);
+  // Floating iron particles (dust)
+  const particleCount = 220;
+  const particleGeo = new THREE.BufferGeometry();
+  const positions = new Float32Array(particleCount*3);
+  for(let i=0;i<particleCount;i++){
+    positions[i*3] = (Math.random()-0.5)*16;
+    positions[i*3+1] = (Math.random()-0.5)*8;
+    positions[i*3+2] = (Math.random()-0.5)*10;
   }
-  ptsGeo.setAttribute('position', new THREE.BufferAttribute(positions,3));
-  const ptsMat = new THREE.PointsMaterial({color:0xffb02e, size:0.045, transparent:true, opacity:.85});
-  const points = new THREE.Points(ptsGeo, ptsMat);
-  group.add(points);
+  particleGeo.setAttribute('position', new THREE.BufferAttribute(positions,3));
+  const particleMat = new THREE.PointsMaterial({ color:0xc41e1e, size:0.025, transparent:true, opacity:0.55 });
+  const particles = new THREE.Points(particleGeo, particleMat);
+  scene.add(particles);
 
-  let mouseX=0, mouseY=0;
+  // Ground plane reflection-ish
+  const groundGeo = new THREE.PlaneGeometry(40,40);
+  const groundMat = new THREE.MeshStandardMaterial({ color:0x050505, metalness:0.3, roughness:0.8 });
+  const ground = new THREE.Mesh(groundGeo, groundMat);
+  ground.rotation.x = -Math.PI/2;
+  ground.position.y = -2.4;
+  scene.add(ground);
+
+  let targetRotX=0, targetRotY=0;
   window.addEventListener('mousemove', e=>{
-    mouseX = (e.clientX/window.innerWidth - .5);
-    mouseY = (e.clientY/window.innerHeight - .5);
+    targetRotY = (e.clientX/window.innerWidth - 0.5) * 0.5;
+    targetRotX = (e.clientY/window.innerHeight - 0.5) * 0.25;
   });
 
+  const clock = new THREE.Clock();
   function animate(){
-    requestAnimationFrame(animate);
-    core.rotation.y += 0.0035; core.rotation.x += 0.0015;
-    points.rotation.y -= 0.0012;
-    group.rotation.y += (mouseX*0.4 - group.rotation.y)*0.03;
-    group.rotation.x += (mouseY*0.25 - group.rotation.x)*0.03;
+    const t = clock.getElapsedTime();
+    barbell.rotation.x += (targetRotX - barbell.rotation.x)*0.04;
+    barbell.rotation.y += ((targetRotY) - barbell.rotation.y)*0.04;
+    barbell.position.y = 0.2 + Math.sin(t*0.6)*0.08;
+    particles.rotation.y = t*0.02;
+    keyLight.intensity = 7.5 + Math.sin(t*1.4)*0.8;
     renderer.render(scene, camera);
+    requestAnimationFrame(animate);
   }
   animate();
+
+  window.addEventListener('resize', ()=>{
+    camera.aspect = window.innerWidth/window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
 })();
+
+/* ===================== BMI CALCULATOR ===================== */
+const heightEl = document.getElementById('height');
+const weightEl = document.getElementById('weight');
+const hVal = document.getElementById('hVal');
+const wVal = document.getElementById('wVal');
+const bmiVal = document.getElementById('bmiVal');
+const bmiCat = document.getElementById('bmiCat');
+
+function updateBMI(){
+  const h = parseFloat(heightEl.value)/100;
+  const w = parseFloat(weightEl.value);
+  hVal.textContent = heightEl.value + ' cm';
+  wVal.textContent = weightEl.value + ' kg';
+  const bmi = w/(h*h);
+  bmiVal.textContent = bmi.toFixed(1);
+  let cat, color;
+  if(bmi<18.5){cat='UNDERWEIGHT'; color='#cdb079';}
+  else if(bmi<25){cat='NORMAL'; color='#c41e1e';}
+  else if(bmi<30){cat='OVERWEIGHT'; color='#ff7a3b';}
+  else {cat='OBESE'; color='#ff3b3b';}
+  bmiCat.textContent = cat;
+  bmiCat.style.borderColor = color;
+  bmiCat.style.color = color;
+}
+heightEl.addEventListener('input', updateBMI);
+weightEl.addEventListener('input', updateBMI);
+updateBMI();
+
+/* ===================== CONTACT FORM ===================== */
+document.getElementById('contact-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  const label = document.getElementById('submit-label');
+  label.textContent = 'Request Sent — We\\'ll Call You';
+  this.querySelector('.submit-btn').style.background = '#c41e1e';
+  this.querySelector('.submit-btn').style.color = '#fff';
+  this.reset();
+  setTimeout(()=>{ label.textContent='Request a Trial Pass'; this.querySelector('.submit-btn').style.background='var(--bone)'; this.querySelector('.submit-btn').style.color='var(--void)'; }, 3200);
+});
 </script>
 </body>
 </html>
